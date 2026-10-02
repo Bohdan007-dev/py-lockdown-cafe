@@ -5,10 +5,10 @@ from app.errors import (NotVaccinatedError,
 
 
 class Cafe:
-    def __init__(self, name):
+    def __init__(self, name: str) -> None:
         self.name = name
 
-    def visit_cafe(self, dict_):
+    def visit_cafe(self, dict_: dict) -> str:
         today = datetime.date.today()
 
         if "vaccine" not in dict_:
